@@ -10,10 +10,10 @@ Feel free to look around, but do not be surprised if most of the code is horribl
 ### 2020-11-10
 
 - The combos I'm using for () and [] interfere with Cmd+Shift and Cmd+Alt shortcuts, so I've moved them around a bit. Now they work like this:
-  - `F+R` → `(`
-  - `J+U` → `)`
-  - `D+E` → `[`
-  - `K+I` → `]`
+  - `F+R` → `(` (or `T+P` in Colemak)
+  - `J+U` → `)` (or `N+L` in Colemak)
+  - `D+E` → `[` (or `S+F` in Colemak)
+  - `K+I` → `]` (or `E+U` in Colemak)
 
 Now I _really_ need to get lighter springs for my switches :P
 

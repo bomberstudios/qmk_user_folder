@@ -9,6 +9,10 @@ enum combos {
   COMBO_PARENS_RIGHT,
   COMBO_BRACKET_LEFT,
   COMBO_BRACKET_RIGHT,
+  COMBO_PARENS_LEFT_COLEMAK,
+  COMBO_PARENS_RIGHT_COLEMAK,
+  COMBO_BRACKET_LEFT_COLEMAK,
+  COMBO_BRACKET_RIGHT_COLEMAK,
 };
 
 const uint16_t PROGMEM combo_tab[] =      {KC_R, KC_T, COMBO_END};
@@ -19,6 +23,10 @@ const uint16_t PROGMEM combo_parens_left[] = {SHT_F, KC_R, COMBO_END};
 const uint16_t PROGMEM combo_parens_right[] = {SHT_J, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_bracket_left[] = {CMD_D, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_bracket_right[] = {CMD_K, KC_I, COMBO_END};
+const uint16_t PROGMEM combo_parens_left_colemak[] = {SHT_T, KC_P, COMBO_END};
+const uint16_t PROGMEM combo_parens_right_colemak[] = {SHT_N, KC_L, COMBO_END};
+const uint16_t PROGMEM combo_bracket_left_colemak[] = {CMD_S, KC_F, COMBO_END};
+const uint16_t PROGMEM combo_bracket_right_colemak[] = {CMD_E, KC_U, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [COMBO_TAB] = COMBO(combo_tab, KC_TAB),
@@ -29,4 +37,8 @@ combo_t key_combos[COMBO_COUNT] = {
   [COMBO_PARENS_RIGHT] =  COMBO(combo_parens_right, KC_RPRN),
   [COMBO_BRACKET_LEFT] =  COMBO(combo_bracket_left, KC_LBRC),
   [COMBO_BRACKET_RIGHT] = COMBO(combo_bracket_right, KC_RBRC),
+  [COMBO_PARENS_LEFT_COLEMAK] =   COMBO(combo_parens_left_colemak, KC_LPRN),
+  [COMBO_PARENS_RIGHT_COLEMAK] =  COMBO(combo_parens_right_colemak, KC_RPRN),
+  [COMBO_BRACKET_LEFT_COLEMAK] =  COMBO(combo_bracket_left_colemak, KC_LBRC),
+  [COMBO_BRACKET_RIGHT_COLEMAK] = COMBO(combo_bracket_right_colemak, KC_RBRC),
 };

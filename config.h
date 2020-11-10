@@ -26,4 +26,4 @@
 // #include "tap_dances.h"
 // #endif
 
-#define COMBO_COUNT 8 // There's a way to make this dynamic, see https://github.com/whydobearsxplod/qmk_user_folder for more info
+#define COMBO_COUNT 12 // There's a way to make this dynamic, see https://github.com/whydobearsxplod/qmk_user_folder for more info
