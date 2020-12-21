@@ -4,8 +4,29 @@ This is my user folder for [QMK](https://qmk.fm). It contains common settings fo
 
 Feel free to look around, but do not be surprised if most of the code is horrible, useless, or both. Proceed at your own risk.
 
+## TODO
+
+- [ ] Keycode to flash keyboard, as seen on `drashna`
 
 ## Changelog
+
+### 2020-12-21
+
+- Fixed Colemak combos
+- Default to Colemak layout
+
+### 2020-12-06
+
+- Added combos for Copy and Paste, because I can't believe I still make errors with those shortcuts sometimes:
+  - `F+D` → Copy
+  - `J+K` → Paste
+- Added combos for {}:
+  - `S+W` → {
+  - `L+O` → }
+- Added combos for Undo (maybe I want to swap these for the Copy / Paste shortcuts if I find I like htem a bit more):
+  - `F+V` → Undo (Cmd + Z)
+  - `J+M` → Redo (Cmd + Shift + Z)
+- Tweaked tapping term again, back to 150 to see how it works. I'm having issues with layer switching on the Atreus (maybe due to the linear switches?) so let's see if this makes the situation better.
 
 ### 2020-11-10
 

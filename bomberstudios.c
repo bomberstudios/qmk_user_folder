@@ -13,6 +13,12 @@ uint16_t ctl_tab_timer = 0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    case COLEMAK:
+      set_single_persistent_default_layer(_COLEMAK);
+      break;
+    case QWERTY:
+      set_single_persistent_default_layer(_QWERTY);
+      break;
     case M_COLON:
       if (record->event.pressed) {
         register_code16(KC_COLON);
@@ -103,10 +109,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     // case SHT_J:
     //   return TAPPING_TERM - 50;
     case CTL_A:
-    // case TD_QCL:
-    // case KC_Q:
     case SPC_3:
-      return TAPPING_TERM + 100;
+      return TAPPING_TERM + 50; // I think I can finally reduce this value from 150 to 50
     // Colemak home row mods need a much higher tapping term
     // while I'm learning, otherwise they won't register
     // Alternatively, I could enable RETRO TAPPING on Colemak?
@@ -118,7 +122,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case CMD_E:
     case ALT_I:
     case CTL_O:
-      return TAPPING_TERM + 800; // Yes, this is quite extreme
+      return TAPPING_TERM + 400; // Yes, this is quite extreme
     default:
       return TAPPING_TERM;
   }

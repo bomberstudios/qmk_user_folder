@@ -1,5 +1,5 @@
-#define _QWERTY    0
-#define _COLEMAK   1
+#define _COLEMAK   0
+#define _QWERTY    1
 #define _NUMBER    2
 #define _SYMBOL    3
 #define _MOVE      4
@@ -7,8 +7,8 @@
 #define _ADJUST    6
 
 enum custom_keycodes {
-  QWERTY = SAFE_RANGE,
-  COLEMAK,
+  COLEMAK = SAFE_RANGE,
+  QWERTY,
   NUMBER,
   SYMBOL,
   MOVE,
@@ -21,7 +21,7 @@ enum custom_keycodes {
   RANDOM,
 };
 
-#define L_COL TG(_COLEMAK)
+#define L_COL TG(_QWERTY)
 #define L_NUM LT(_NUMBER,KC_ENT)
 #define L_SYM LT(_SYMBOL,KC_TAB)
 #define L_MOM MO(_MOVE)
@@ -33,6 +33,7 @@ enum custom_keycodes {
 #define PASTE LWIN(KC_V)
 #define CUT LWIN(KC_X)
 #define UNDO LWIN(KC_Z)
+#define REDO LSFT(LWIN(KC_Z))
 #define SHT_SCR LWIN(LSFT(KC_3))
 #define SHT_ARE LWIN(LSFT(KC_4))
 #define SHT_OPT LWIN(LSFT(KC_5))
