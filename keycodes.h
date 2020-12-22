@@ -1,10 +1,12 @@
-#define _COLEMAK   0
-#define _QWERTY    1
-#define _NUMBER    2
-#define _SYMBOL    3
-#define _MOVE      4
-#define _UNICODE   5
-#define _ADJUST    6
+enum layer_names {
+  _COLEMAK,
+  _QWERTY,
+  _NUMBER,
+  _SYMBOL,
+  _MOVE,
+  _UNICODE,
+  _ADJUST,
+};
 
 enum custom_keycodes {
   COLEMAK = SAFE_RANGE,
@@ -53,7 +55,6 @@ enum custom_keycodes {
 #define ZOOMOUT  LWIN(KC_MINUS)
 #define ZENMODE   LWIN(KC_DOT)
 
-
 // Nice names
 #define Ctrl KC_LCTL
 #define Alt KC_LALT
@@ -80,7 +81,6 @@ enum custom_keycodes {
 #define ALT_I MT(MOD_LALT,KC_I)
 #define CTL_O MT(MOD_LCTL,KC_O)
 
-
 #define SPC_1 LT(1,KC_SPC)
 #define BSP_1 LT(1,KC_BSPC)
 #define SPC_2 LT(2,KC_SPC)
@@ -99,6 +99,3 @@ enum custom_keycodes {
 // to be used with Karabiner to launch apps, and other stuff
 #define HYPRTAB HYPR_T(KC_TAB)
 #define HYPRESC HYPR_T(KC_ESC)
-
-// FN_MO13 - trilayer, layer 1 (3 when held with FN_MO23)
-// FN_MO23 - trilayer, layer 2 (3 when held with FN_MO13)
