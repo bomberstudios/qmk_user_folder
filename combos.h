@@ -1,8 +1,6 @@
 // Remember to define COMBO_COUNT in config.h
-
+// TODO: see if I can get away with only defining one enum per combo with multiple triggers (i.e: get rid of the duplicated Colemak combo enums)
 enum combos {
-  // COMBO_TAB,
-  // COMBO_ESC,
   COMBO_CAPSLOCK,
   COMBO_CAPSLOCK_COLEMAK,
   COMBO_PARENS_LEFT,
@@ -25,6 +23,13 @@ enum combos {
   COMBO_REDO,
   COMBO_UNDO_COLEMAK,
   COMBO_REDO_COLEMAK,
+  // QAZ Combos
+  COMBO_BACKSPACE,
+  COMBO_BACKSPACE_COLEMAK,
+  COMBO_ENTER,
+  COMBO_ENTER_COLEMAK,
+  COMBO_TAB,
+  COMBO_QUESTION,
 };
 
 // const uint16_t PROGMEM combo_tab[] =      {KC_R, KC_T, COMBO_END};
@@ -51,11 +56,15 @@ const uint16_t PROGMEM combo_undo[] = {CMD_D, KC_C, COMBO_END};
 const uint16_t PROGMEM combo_redo[] = {CMD_K, KC_COMM, COMBO_END};
 const uint16_t PROGMEM combo_undo_colemak[] = {CMD_S, KC_C, COMBO_END};
 const uint16_t PROGMEM combo_redo_colemak[] = {CMD_E, KC_COMM, COMBO_END};
-
+// QAZ
+const uint16_t PROGMEM combo_backspace[] = {KC_O, KC_P, COMBO_END};
+const uint16_t PROGMEM combo_backspace_colemak[] = {KC_Y, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM combo_enter[] = {ALT_L, CTL_CLN, COMBO_END};
+const uint16_t PROGMEM combo_enter_colemak[] = {ALT_I, CTL_O, COMBO_END};
+const uint16_t PROGMEM combo_tab[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM combo_question[] = {KC_COMM, KC_DOT, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  // [COMBO_TAB] = COMBO(combo_tab, KC_TAB),
-  // [COMBO_ESC] = COMBO(combo_esc, KC_ESC),
   [COMBO_CAPSLOCK] = COMBO(combo_capslock, KC_CAPS),
   [COMBO_CAPSLOCK_COLEMAK] = COMBO(combo_capslock_colemak, KC_CAPS),
   [COMBO_PARENS_LEFT] =   COMBO(combo_parens_left, KC_LPRN),
@@ -78,4 +87,10 @@ combo_t key_combos[COMBO_COUNT] = {
   [COMBO_REDO] = COMBO(combo_redo, REDO),
   [COMBO_UNDO_COLEMAK] = COMBO(combo_undo_colemak, UNDO),
   [COMBO_REDO_COLEMAK] = COMBO(combo_redo_colemak, REDO),
+  [COMBO_BACKSPACE] = COMBO(combo_backspace, KC_BSPC),
+  [COMBO_BACKSPACE_COLEMAK] = COMBO(combo_backspace_colemak, KC_BSPC),
+  [COMBO_ENTER] = COMBO(combo_enter, KC_ENT),
+  [COMBO_ENTER_COLEMAK] = COMBO(combo_enter_colemak, KC_ENT),
+  [COMBO_TAB] = COMBO(combo_tab, KC_TAB),
+  [COMBO_QUESTION] = COMBO(combo_question, KC_QUESTION),
 };

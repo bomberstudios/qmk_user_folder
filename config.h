@@ -35,4 +35,9 @@
 // #include "tap_dances.h"
 // #endif
 
-#define COMBO_COUNT 22 // There's a way to make this dynamic, see https://github.com/whydobearsxplod/qmk_user_folder for more info
+#define COMBO_COUNT 28 // There's a way to make this dynamic, see https://github.com/whydobearsxplod/qmk_user_folder for more info
+
+#ifdef QAZ
+#define COMBO_TERM 100
+// TODO: actually, what I want to do is define an entirely different set of combos for the qaz, because the ones that use the home row don't really make sense for row-staggered keyboards. But while I get there, this will do...
+#endif
