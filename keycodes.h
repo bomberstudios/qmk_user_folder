@@ -1,3 +1,14 @@
+#ifdef QAZ
+enum layer_names {
+  _QWERTY,
+  _COLEMAK,
+  _NUMBER,
+  _SYMBOL,
+  _MOVE,
+  _UNICODE,
+  _ADJUST,
+};
+#else
 enum layer_names {
   _COLEMAK,
   _QWERTY,
@@ -7,6 +18,7 @@ enum layer_names {
   _UNICODE,
   _ADJUST,
 };
+#endif
 
 enum custom_keycodes {
   COLEMAK = SAFE_RANGE,
@@ -21,9 +33,12 @@ enum custom_keycodes {
   CMD_TAB,
   CTL_TAB,
   RANDOM,
+  // COLEBAS
 };
 
 #define L_COL TG(_QWERTY)
+#define COLEMAK TG(_QWERTY)
+// #define COLEBAS TG(_COLEMAK_BASIC)
 #define L_NUM LT(_NUMBER,KC_ENT)
 #define L_SYM LT(_SYMBOL,KC_TAB)
 #define L_MOM MO(_MOVE)
