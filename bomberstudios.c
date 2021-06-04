@@ -1,6 +1,7 @@
 #include QMK_KEYBOARD_H
 
 #include "keycodes.h"
+//#include "bomberstudios.h"
 
 #ifdef COMBO_ENABLE
 #include "combos.h"
@@ -83,6 +84,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         send_string(randomArray[n]);
       }
       break;
+      // TODO: reverse shift behaviour for semicolon key, so far I've been unable to get it to worke
+    // case KC_SCLN:
+    //   SHIFT_NO(KC_1, KC_SCLN);
+    //   break;
   }
   return true;
 };
@@ -108,21 +113,21 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     // case SHT_J:
     //   return TAPPING_TERM - 50;
-    case CTL_A:
+    // case CTL_A:
     case SPC_3:
-      return TAPPING_TERM + 50; // I think I can finally reduce this value from 150 to 50
+      return TAPPING_TERM + 100; // I think I can finally reduce this value from 150 to 50
     // Colemak home row mods need a much higher tapping term
     // while I'm learning, otherwise they won't register
     // Alternatively, I could enable RETRO TAPPING on Colemak?
-    // case CTL_A:
-    case ALT_R:
-    case CMD_S:
-    case SHT_T:
-    case SHT_N:
-    case CMD_E:
-    case ALT_I:
+    case CTL_A:
+    // case ALT_R:
+    // case CMD_S:
+    // case SHT_T:
+    // case SHT_N:
+    // case CMD_E:
+    // case ALT_I:
     case CTL_O:
-      return TAPPING_TERM + 400; // Yes, this is quite extreme
+      return TAPPING_TERM + 400; // Yes, this is quite extreme, but looks like my left pinkie is *slow*
     default:
       return TAPPING_TERM;
   }
