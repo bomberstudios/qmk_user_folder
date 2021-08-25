@@ -1,18 +1,13 @@
 #pragma once
 
-#define PERMISSIVE_HOLD
+#undef TAPPING_TERM
+
+// #define PERMISSIVE_HOLD // turning this off because it kinda defeats the purpose of having a long tapping term for Alt and Control
 #define IGNORE_MOD_TAP_INTERRUPT
 // #define TAPPING_FORCE_HOLD
 
-// Disable by now, to test...
 // #define HOLD_ON_OTHER_KEY_PRESS // See https://github.com/qmk/qmk_firmware/blob/155cc17359711a6dd7b67119ec994800588ebaaa/docs/tap_hold.md#hold-on-other-key-press
 // #define RETRO_TAPPING // wish there was a retro tapping per key, because I'd like to have this only for some keys. But so be it…
-
-#undef TAPPING_TERM
-// #ifdef PREONIC
-// #define TAPPING_TERM 250
-// #define RETRO_TAPPING
-// #else
 
 #define TAPPING_TERM 200
 // 2021-06-04: back to the default 200
@@ -22,7 +17,6 @@
 // 2020-12-19: 100 is unusable with HOLD_ON_OTHER_KEY_PRESS, let's try 300
 // 2021-02-13: let's reduce this a bit more, because I'm having issues when typing numbers and symbols where the mod won't register (although I'm now typing this note and can't see this happening, so I wonder if that's something to do with specific keyboards and only happens with the Atreus...)
 // 2021-04-20: I'm having issues with Shift recently, I assume that maybe related with speed increases. So I'll set this to 150 and see what happens (or maybe I should reduce it just for the homerow shift keys?)
-// #endif
 
 #define TAPPING_TERM_PER_KEY
 
@@ -48,3 +42,5 @@
 #define COMBO_TERM 100
 // TODO: actually, what I want to do is define an entirely different set of combos for the qaz, because the ones that use the home row don't really make sense for row-staggered keyboards. But while I get there, this will do...
 #endif
+
+
