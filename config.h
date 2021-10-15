@@ -6,7 +6,7 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 // #define TAPPING_FORCE_HOLD
 
-// #define HOLD_ON_OTHER_KEY_PRESS // See https://github.com/qmk/qmk_firmware/blob/155cc17359711a6dd7b67119ec994800588ebaaa/docs/tap_hold.md#hold-on-other-key-press
+// #define HOLD_ON_OTHER_KEY_PRESS // See https://github.com/qmk/qmk_firmware/blob/155cc17359711a6dd7b67119ec994800588ebaaa/docs/tap_hold.md#hold-on-other-key-press -> this makes home row mods unusable for fast typists, because you can't do rolls without triggering the wrong combination. So, let's keep it off
 // #define RETRO_TAPPING // wish there was a retro tapping per key, because I'd like to have this only for some keys. But so be it…
 
 #define TAPPING_TERM 200

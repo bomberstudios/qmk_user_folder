@@ -119,15 +119,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     // Colemak home row mods need a much higher tapping term
     // while I'm learning, otherwise they won't register
     // Alternatively, I could enable RETRO TAPPING on Colemak?
-    // case SHT_T:
-    // case SHT_N:
+    case SHT_T:
+    case SHT_N:
+      return TAPPING_TERM - 50;
     // case CMD_S:
     // case CMD_E:
     case ALT_R:
     case ALT_I:
     case CTL_A:
     case CTL_O:
-      return TAPPING_TERM + 1000; // Yes, this is quite extreme, but looks like my left pinkie is *slow*
+      return TAPPING_TERM + 400; // Yes, this is quite extreme, but looks like my left pinkie is *slow*
     default:
       return TAPPING_TERM;
   }
