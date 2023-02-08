@@ -33,8 +33,16 @@ enum custom_keycodes {
   CMD_TAB,
   CTL_TAB,
   RANDOM,
+  ZOOMLEFT,
+  ZOOMRIGHT,
+  ZOOMFULL
   // COLEBAS
 };
+
+// Window movement
+#define ZOOMLEFT LWIN(LSFT(LCTL(LALT(KC_LEFT))))
+#define ZOOMRIGHT LWIN(LSFT(LCTL(LALT(KC_RIGHT))))
+#define ZOOMFULL LWIN(LALT(LCTL(KC_Z)))
 
 #define L_COL TG(_QWERTY)
 #define COLEMAK TG(_QWERTY)
