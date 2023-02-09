@@ -7,6 +7,8 @@
 #include "combos.h"
 #endif
 
+#define RANDOM_ARRAY_SIZE 10
+
 bool is_cmd_tab_active = false;
 bool is_ctl_tab_active = false;
 uint16_t cmd_tab_timer = 0;
@@ -65,8 +67,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case RANDOM:
       // This outputs a random item from `randomArray`
       // Sounds like a pretty useless feature, but it'll make sense eventually
-      if (record->event.pressed) {
-        #define ARRAY_SIZE 10
+      if (record->event.pressed)
+      {
         const char *randomArray[] = {
           "0",
           "1",
@@ -80,7 +82,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           "9"
         };
         srand(timer_read());
-        int n = rand()%ARRAY_SIZE;
+        int n = rand() % RANDOM_ARRAY_SIZE;
         send_string(randomArray[n]);
       }
       break;
@@ -126,6 +128,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     // case CMD_E:
     case ALT_R:
     case ALT_I:
+      return TAPPING_TERM + 100; // Yes, this is quite extreme, but looks like my left pinkie is *slow*
     case CTL_A:
     case CTL_O:
       return TAPPING_TERM + 400; // Yes, this is quite extreme, but looks like my left pinkie is *slow*
