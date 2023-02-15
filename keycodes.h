@@ -114,6 +114,7 @@ enum custom_keycodes {
 #define SPC_4 LT(4,KC_SPC)
 #define BSP_4 LT(4,KC_BSPC)
 
+#define CMD_0 LWIN(KC_0)
 #define CMD_1 LWIN(KC_1)
 #define CMD_2 LWIN(KC_2)
 #define CMD_3 LWIN(KC_3)
